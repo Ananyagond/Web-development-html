@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Registration form</title>
+<script>
+    function validationform()
+    {
+ 
+         var name=document.getElementById("name").value;
+         var password=document.getElementById("password").value;
+
+        if(name.length<6 || password.length<6)
+       { 
+              alert("name and password should contain atlest 6 characters long");
+              return false;
+        }
+        return true;
+     }
+</script>
+</head>
+<body>
+<body bgcolor="lightblue">
+ <form onsubmit="return validationform()">
+<br>
+<center><label for ="name">NAME</label></center>
+<center><input type="text" id="name" name="name" required></center>
+<br>
+<br>
+<center><label for ="password">PASSWORD</label></center>
+<center><input type="password" id="password" name="password" required></center>
+<br>
+<br>
+<center><input type="submit" value="submit"></center>
+</form>
+</body>
+</html>
